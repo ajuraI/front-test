@@ -1,0 +1,29 @@
+.cards-filter {
+    padding: 0 16px;
+}
+
+.cards-filter .title {
+    font-size: 32px;
+    margin-bottom: 19.42px;
+}
+
+.sort-line {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #131313;
+    display: flex;
+}
+
+.sort-line div {
+    margin-left: 12.67px;
+}
+
+.sort-line div:first-child {
+    color: #939598;
+    margin-left: 5px;
+}
+
+.sortBtn {
+    
+}

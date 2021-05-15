@@ -7,7 +7,7 @@ import photos from '../../img/photos.png';
 function Info() {
   return (
     <section className="info">
-      <h1><span>Фото на</span><br/>праздник</h1>
+      <h1 className="title"><span>Фото на</span><br/>праздник</h1>
       <div className="info-text">Lorem ipsum dolor sit amet, consectetur <span>adipiscing elit</span>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
       <div className="advantages">
         <div className="adv-line">
