@@ -19,11 +19,13 @@
     margin-left: 12.67px;
 }
 
-.sort-line div:first-child {
+.sortBtn {
+    display: flex;
     color: #939598;
     margin-left: 5px;
+    cursor: pointer;
 }
 
-.sortBtn {
-    
+.sortBtn img {
+    margin-left: 10px;
 }
