@@ -1,0 +1,60 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo {
+    padding: 12px 10px;
+    width: 63px;
+    height: 60px;
+}
+
+.wrapper {
+    position: relative;
+    margin-top: 41px;
+    display: flex;
+    justify-content: center;
+}
+
+.video {
+    border: 3px solid #EE3D48;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 328px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play  {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circles {
+    position: absolute;
+    left: 74%;
+    top: -6%;
+    z-index: 1;
+}
+
+.ellipse {
+    position: absolute;
+    left: 0;
+    top: 117px;
+    z-index: 1;
+}
+
+.video-pic {
+    z-index: 2;
+}
