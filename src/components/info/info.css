@@ -1,0 +1,64 @@
+.info {
+    margin-top: 61.46px;
+    padding: 0 16px;
+}
+
+.info h1 {
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 53px;
+
+}
+
+.info h1 span {
+    color: #EE3D48;
+}
+
+.info-text {
+    font-weight: normal;
+    color: #131313;
+    font-size: 16px;
+    line-height: 130%;
+}
+
+.info-text span {
+    color: #EE3D48;
+    text-decoration: underline;
+}
+
+.advantages {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.adv-line {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adv-line:first-child {
+    margin-bottom: 30px;
+}
+
+
+.adv-block1 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 156px;
+    height: 84px;
+}
+
+.adv-text1 {
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #131313;
+}
