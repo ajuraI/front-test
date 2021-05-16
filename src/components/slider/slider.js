@@ -1,66 +1,166 @@
 import './slider.css';
 import btnPrev from '../../img/btn-back.svg';
 import btnNext from '../../img/btn-next.svg';
-import { useState } from 'react';
+import React from 'react';
 
-function Slider(props) {
+class Slider extends React.Component {
 
-  let showedSlides = [];
-  if (props.children.length > 2) showedSlides = [props.children.length-1, 0, 1];
-  else if (props.children.length === 2) showedSlides = [1, 0, 1];
-  else if (props.children) showedSlides = [0];
-  const [slides, setSlides] = useState(showedSlides);
+  constructor(props) {
+    super(props);
+    this.slide0 = React.createRef();
+    this.slide1 = React.createRef();
+    this.slide2 = React.createRef();
+    this.slide3 = React.createRef();
+    this.animation = false;
+  }
 
-  const btnNextOnClick = () => {
-    if (slides.length > 1) {
-      setSlides((prevSlides) => {
-        let newSlides = [];
-        newSlides[0] = prevSlides[1];
-        newSlides[1] = prevSlides[2];
-        newSlides[2] = (prevSlides[2] !== props.children.length-1) ? prevSlides[2]+1 : 0;
-        return newSlides;
-      })
+  getSlides = () => {
+    let showedSlides = [];
+    if (this.props.children.length > 3) showedSlides = [this.props.children.length-1, 0, 1, 2];
+    else if (this.props.children.length === 3) showedSlides = [2, 0, 1, 2];
+    else if (this.props.children.length === 2) showedSlides = [1, 0, 1, 0];
+    else if (this.props.children) showedSlides = [0];
+    return showedSlides;
+  }
+
+  state = {
+    slides: this.getSlides()
+  };
+  
+  componentWillUpdate() {
+    this.slide0.current.style.transition = 'none';
+    this.slide1.current.style.transition = 'none';
+    this.slide2.current.style.transition = 'none';
+    this.slide3.current.style.transition = 'none';
+  }
+
+  componentDidUpdate() {
+    setTimeout(() => {
+      this.slide0.current.style.transition = '0.5s';
+      this.slide1.current.style.transition = '0.5s';
+      this.slide2.current.style.transition = '0.5s';
+      this.slide3.current.style.transition = '0.5s';
+      this.animation = false;
+    }, 100);
+    
+  }
+
+  btnNextOnClick = () => {
+    if (this.state.slides.length > 1 && !this.animation) {
+      setTimeout(() => {
+        this.slide1.current.style.left = 0 + 'px';
+        this.slide2.current.style.left = this.props.width + 16 + 'px';
+        this.slide3.current.style.left = this.props.width*2 + 32 + 'px';
+        this.setState(({slides}) => {
+          let newSlides = [];
+          newSlides[0] = slides[1];
+          newSlides[1] = slides[2];
+          newSlides[2] = slides[3];
+          newSlides[3] = (slides[3] !== this.props.children.length-1) ? slides[3]+1 : 0;
+          return {slides: newSlides};
+        })
+      }, 500);
+      this.nextAnimation();
+    }
+    
+  }
+
+  btnPrevOnClick = () => {
+    if (this.state.slides.length > 1 && !this.animation) {
+      setTimeout(() => {
+        this.slide2.current.style.left = this.props.width + 16 + 'px';
+        this.slide1.current.style.left = 0 + 'px';
+        this.slide0.current.style.left = -this.props.width - 16 + 'px';
+        this.setState(({slides}) => {
+          let newSlides = [];
+          newSlides[3] = slides[2];
+          newSlides[2] = slides[1];
+          newSlides[1] = slides[0];
+          newSlides[0] = (slides[0] !== 0) ? slides[0]-1 : this.props.children.length-1;
+          return {slides: newSlides};
+        })
+      }, 500);
+      this.prevAnimation();
     }
   }
 
-  const btnPrevOnClick = () => {
-    if (slides.length > 1) {
-      setSlides((prevSlides) => {
-        let newSlides = [];
-        newSlides[2] = prevSlides[1];
-        newSlides[1] = prevSlides[0];
-        newSlides[0] = (prevSlides[0] !== 0) ? prevSlides[0]-1 : props.children.length-1;
-        return newSlides;
-      })
-    }
+  nextAnimation = () => {
+    this.animation = true;
+    this.slide1.current.style.left = -this.props.width - 16 + 'px';
+    this.slide2.current.style.left = 0 + 'px';
+    this.slide3.current.style.left = this.props.width + 16 + 'px';
+  }
+
+  prevAnimation = () => {
+    this.animation = true;
+    this.slide2.current.style.left = this.props.width*2 + 16 + 'px';
+    this.slide1.current.style.left = this.props.width + 16 + 'px';
+    this.slide0.current.style.left = 0 + 'px';
+  }
+
+  
+  
+  render() {
+    let style = {};
+    let backLineWidth = {width: '16px'}
+    if (this.props.children.length > 1) backLineWidth = {width: 16 + (this.props.children.length-1)*8 + 'px'};
+    if (this.props.width) style.width = this.props.width + 'px';
+    if (this.props.height) style.height = this.props.height + 'px';
+    let num = 0;
+    return (
+      <div className="slider-wrapper">
+        <div className="slider" style={style}>
+            {this.state.slides.map((id, index)=> {
+            let style = {left: 0};
+            if (this.state.slides.length === 1) {
+              num = 0;
+              return (<div key={index} className="banner-slide" style={style} ref={this.slide1}>
+                {this.props.children}
+              </div>)
+            }
+            if (index === 0) {
+              style = {left: -this.props.width - 16 + 'px'};
+              return (<div key={index} className="banner-slide" style={style} ref={this.slide0}>
+                {this.props.children[id]}
+              </div>)
+            }
+            else if (index === 2) {
+              style = {left: this.props.width + 16 + 'px'};
+              return (<div key={index} className="banner-slide" style={style} ref={this.slide2}>
+                {this.props.children[id]}
+              </div>)
+            }
+            else if (index === 3) {
+              style = {left: this.props.width*2 + 32 + 'px'};
+              return (<div key={index} className="banner-slide" style={style} ref={this.slide3}>
+                {this.props.children[id]}
+              </div>)
+            }
+            else {
+              num = id;
+              return (<div key={index} className="banner-slide" style={style} ref={this.slide1}>
+                {this.props.children[id]}
+              </div>)
+            }
+          })}
+          <div className="button-prev" onClick={()=> this.btnPrevOnClick()}>
+            <img src={btnPrev}></img>
+          </div>
+          <div className="button-next" onClick={()=> this.btnNextOnClick()}>
+            <img src={btnNext}></img>
+          </div>
+        </div>
+        {/* <div>{num+1}/{this.state.slides.length}</div> */}
+        <div className="active-field">
+          <div className="dot"></div>
+          <div className="longdot" style={backLineWidth}>
+            <div className="activeLine" style={{left: num*8}}></div>
+          </div>
+          <div className="dot"></div>
+        </div>
+      </div>
+    );
   }
   
-  let style = {};
-  if (props.width) style.width = props.width + 'px';
-  if (props.height) style.height = props.height + 'px';
-  return (
-    <div className="slider-wrapper">
-      <div className="slider" style={style}>
-        {slides.map((id, index)=> {
-          let style = {};
-          if (slides.length === 1) return (<div key={index} className="banner-slide" style={style}>
-            {props.children}
-          </div>)
-          if (index === 0) style = {left: -props.width + 'px'};
-          else if (index === 2) style = {left: props.width + 16 + 'px'};
-          return (<div key={index} className="banner-slide" style={style}>
-            {props.children[id]}
-          </div>)
-        })}
-        <div className="button-prev" onClick={()=> btnPrevOnClick()}>
-          <img src={btnPrev}></img>
-        </div>
-        <div className="button-next" onClick={()=> btnNextOnClick()}>
-          <img src={btnNext}></img>
-        </div>
-        
-      </div>
-    </div>
-  );
 }
 export default Slider;

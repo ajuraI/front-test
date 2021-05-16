@@ -29,3 +29,8 @@
 .sortBtn img {
     margin-left: 10px;
 }
+
+.cards-filter ul {
+    list-style-type: none;
+}
+

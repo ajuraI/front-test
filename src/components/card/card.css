@@ -1,0 +1,50 @@
+.card {
+    margin-top: 19.26px;
+    padding-top: 16px;
+}
+
+
+.card-title {
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 16.84px;
+    /* Text / Primary */
+
+    color: #131313;
+}
+
+.subTitle {
+    margin-top: 6px;
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+
+    color: #131313;
+}
+
+.subTitle span {
+    color: #6A6A6A;
+}
+
+
+.add-options {
+    margin-top: 24.09px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.options-title {
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 24px;
+    /* height: 15px; */
+    border-bottom: 1px solid #EE3D48;
+    color: #EE3D48;
+}
