@@ -1,0 +1,35 @@
+.drop-down-list {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 4px 8px!important;
+    border: 1px solid #D5DAE0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    top: 0;
+}
+
+
+.drop-down {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid #D5DAE0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.drop-down-wrapper {
+    position: relative;
+}
+
+.drop-down img {
+    padding-left: 6px;
+}

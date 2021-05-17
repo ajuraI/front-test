@@ -1,12 +1,14 @@
 @font-face {
   font-family: "Roboto Slab";
   font-weight: bold;
+  font-display: swap;
   src: url(./fonts/roboto-slab/RobotoSlab-Bold.ttf);
 }
 
 @font-face {
   font-family: "Roboto Slab";
   font-weight: normal;
+  font-display: swap;
   src: url(./fonts/roboto-slab/RobotoSlab-Medium.ttf);
 }
 
@@ -14,12 +16,14 @@
 @font-face {
   font-family: "Work Sans";
   font-weight: normal;
+  font-display: swap;
   src: url(./fonts/work-sans/WorkSans-Medium.ttf);
 }
 
 @font-face {
   font-family: "Work Sans";
   font-weight: bold;
+  font-display: swap;
   src: url(./fonts/work-sans/WorkSans-Bold.ttf);
 }
 
@@ -44,3 +48,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

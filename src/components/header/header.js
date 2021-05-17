@@ -4,22 +4,37 @@ import circles from '../../img/circles-group.svg';
 import ellipse from '../../img/ellipse.svg';
 import videoPicture from '../../img/video-pic.png';
 import playBtn from '../../img/play-btn.svg';
+import { useState } from 'react';
+import ModalWindow from '../../components/modal-window';
 
 
 function Header() {
+
+
+  const [modal, setModalState] = useState(false);
+
+  const onClickVideo = () => {
+    setModalState(true);
+  }
+
   return (
     <header>
-        <img src={logo} className="logo"/>
+        <img src={logo} className="logo"  alt=""/>
         <div className="wrapper">
-            <img src={circles} className="circles"></img>
-            <img src={ellipse} className="ellipse"></img>
-            <div className="video">
-                <img src={videoPicture} className="video-pic"></img>
+            <img src={circles} className="circles"  alt=""></img>
+            <img src={ellipse} className="ellipse"  alt=""></img>
+            <div className="video" onClick={()=> onClickVideo()}>
+                <img src={videoPicture} className="video-pic"  alt=""></img>
                 <div className="play">
-                    <img src={playBtn} className="play-btn"></img>
+                    <img src={playBtn} className="play-btn"  alt=""></img>
                 </div>
             </div>
         </div>
+        <ModalWindow state={modal} close={()=> setModalState(false)} type={1}>
+          <div className="ytVideo">
+            <iframe title="video" id="video" width="100%" height="100%" src="https://www.youtube.com/embed/KrGRF3TQBiw" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </ModalWindow>
     </header>
   );
 }

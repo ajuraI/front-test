@@ -12,21 +12,21 @@ function Info() {
       <div className="advantages">
         <div className="adv-line">
           <div className="adv-block1">
-            <img src={infinity}></img>
+            <img src={infinity} alt=""></img>
             <div className="adv-text1">Безлимитная<br/> печать фото</div>
           </div>
           <div className="adv-block1">
-            <img src={mask}></img>
+            <img src={mask} alt=""></img>
             <div className="adv-text1">Фотореквизит<br/> в наличии</div>
           </div>
         </div>
         <div className="adv-line">
           <div className="adv-block1">
-            <img src={photos}></img>
+            <img src={photos} alt=""></img>
             <div className="adv-text1">Фотоотчет в электронном виде</div>
           </div>
           <div className="adv-block1">
-            <img src={price}></img>
+            <img src={price} alt=""></img>
             <div className="adv-text1">Цены<br/>ниже рынка</div>
           </div>
         </div>

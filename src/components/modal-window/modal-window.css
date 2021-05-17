@@ -1,0 +1,58 @@
+.modal-window-bg {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.48);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-wondow {
+    height: 81.25%;
+    width: 89%;
+    background-color: #fff;
+    position: relative;
+}
+
+.modal-window-wrapper {
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+
+.modal-window-2 {
+    padding: 16px 16px 16px 16px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    left: calc(100% + 10px);
+    top: -10px;
+    transform: translate(-100%, 0);
+    cursor: pointer;
+}
+
+.close-btn-2 {
+    background: none;
+    border: none;
+    padding: 0;
+    position: absolute;
+    left: calc(100% - 27.28px);
+    top: 27.28px;
+    transform: translate(-100%, 0);
+    cursor: pointer;
+}
+
+
+.ytVideo {
+    width: 100%;
+    height: 100%;
+}

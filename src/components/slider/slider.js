@@ -29,14 +29,11 @@ class Slider extends React.Component {
     slides: this.getSlides()
   };
   
-  componentWillUpdate() {
+  componentDidUpdate() {
     this.slide0.current.style.transition = 'none';
     this.slide1.current.style.transition = 'none';
     this.slide2.current.style.transition = 'none';
     this.slide3.current.style.transition = 'none';
-  }
-
-  componentDidUpdate() {
     setTimeout(() => {
       this.slide0.current.style.transition = '0.5s';
       this.slide1.current.style.transition = '0.5s';
@@ -149,10 +146,10 @@ class Slider extends React.Component {
             }
           })}
           <div className="button-prev" onClick={()=> this.btnPrevOnClick()}>
-            <img src={btnPrev}></img>
+            <img src={btnPrev}  alt=""></img>
           </div>
           <div className="button-next" onClick={()=> this.btnNextOnClick()}>
-            <img src={btnNext}></img>
+            <img src={btnNext}  alt=""></img>
           </div>
           <div className="active-field">
             <div className="dot"></div>
