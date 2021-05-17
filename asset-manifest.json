@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/front-test/static/css/main.baed9fce.chunk.css",
-    "main.js": "/front-test/static/js/main.0bfc8273.chunk.js",
-    "main.js.map": "/front-test/static/js/main.0bfc8273.chunk.js.map",
+    "main.css": "/front-test/static/css/main.95fce1ee.chunk.css",
+    "main.js": "/front-test/static/js/main.4aeb04a1.chunk.js",
+    "main.js.map": "/front-test/static/js/main.4aeb04a1.chunk.js.map",
     "runtime-main.js": "/front-test/static/js/runtime-main.adb7a2dd.js",
     "runtime-main.js.map": "/front-test/static/js/runtime-main.adb7a2dd.js.map",
     "static/js/2.4d088cd1.chunk.js": "/front-test/static/js/2.4d088cd1.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.4c604549.chunk.js": "/front-test/static/js/3.4c604549.chunk.js",
     "static/js/3.4c604549.chunk.js.map": "/front-test/static/js/3.4c604549.chunk.js.map",
     "index.html": "/front-test/index.html",
-    "static/css/main.baed9fce.chunk.css.map": "/front-test/static/css/main.baed9fce.chunk.css.map",
+    "static/css/main.95fce1ee.chunk.css.map": "/front-test/static/css/main.95fce1ee.chunk.css.map",
     "static/js/2.4d088cd1.chunk.js.LICENSE.txt": "/front-test/static/js/2.4d088cd1.chunk.js.LICENSE.txt",
     "static/media/CaretDown.21d385e0.svg": "/front-test/static/media/CaretDown.21d385e0.svg",
     "static/media/index.css": "/front-test/static/media/WorkSans-Medium.f292ced0.ttf",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.adb7a2dd.js",
     "static/js/2.4d088cd1.chunk.js",
-    "static/css/main.baed9fce.chunk.css",
-    "static/js/main.0bfc8273.chunk.js"
+    "static/css/main.95fce1ee.chunk.css",
+    "static/js/main.4aeb04a1.chunk.js"
   ]
 }
