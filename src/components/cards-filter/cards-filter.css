@@ -1,10 +1,18 @@
 .cards-filter {
-    padding: 0 16px;
+    margin-top: 58.56px;
 }
+
+
+.cards-filter ul{
+    padding: 0;
+}
+
+
 
 .cards-filter .title {
     font-size: 32px;
     margin-bottom: 19.42px;
+    padding: 0 16px;
 }
 
 .sort-line {
@@ -13,6 +21,7 @@
     line-height: 16px;
     color: #131313;
     display: flex;
+    padding: 0 16px;
 }
 
 .sort-line div {

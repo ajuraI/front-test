@@ -1,11 +1,19 @@
 .slider-wrapper {
     overflow: hidden;
+    padding-bottom: 16px;
 }
 
 .slider {
     cursor: pointer;
     position: relative;
-  }
+}
+
+@media only screen and (max-width: 329px) {
+    .slider {
+        width: auto!important;
+    } 
+}
+
 .banner-slide {
     position: absolute;
     transition: 0.5s;
@@ -14,20 +22,22 @@
 .button-prev {
     position: absolute;
     top: 50%;
-    left: 0%;
-    transform: translate(25%, -50%);
+    left: 4px;
+    transform: translate(0, -50%);
 }
 .button-next {
     position: absolute;
     top: 50%;
-    left: 100%;
-    transform: translate(-125%, -50%);
+    left: calc(100% - 4px);
+    transform: translate(-100%, -50%);
 }
 
 .active-field {
     margin-top: 12px;
     display: flex;
     justify-content: center;
+    position: relative;
+    top: calc(100% + 12px);
 }
 
 .dot {
@@ -52,4 +62,6 @@
     height: 4px;
     border-radius: 10px;
     background: #EE3D48;
+    transition: 0.2s;
+    left: 0px;
 }

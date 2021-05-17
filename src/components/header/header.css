@@ -1,9 +1,4 @@
-@media only screen and (max-width: 335px) {
-    .video {
-        width: 295.2px!important;
-        height: 180px!important;
-    }
-}
+
 
 header {
     display: flex;
@@ -69,3 +64,21 @@ header {
     width: 100%;
     height: 100%;
 }
+
+
+@media only screen and (max-width: 342px) {
+    .video {
+        width: 262.4px!important;
+        height: 160px!important;
+    }
+    .circles { 
+        left: 70%;
+        top: -8%;
+        transform: scale(0.8);
+    }
+    .ellipse {
+        top: 65px;
+        transform: scale(0.8);
+    }
+}
+

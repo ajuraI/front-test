@@ -1,8 +1,11 @@
 .card {
+    padding: 0 0 0 16px;
     margin-top: 19.26px;
+    margin-bottom: 30px;
     padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0px 14px 5px rgba(245, 245, 245, 1),0px -7px 5px rgba(245, 245, 245, 1);;
 }
-
 
 .card-title {
     font-family: Work Sans, sans-serif;
@@ -35,10 +38,14 @@
 .add-options {
     margin-top: 24.09px;
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 16px;
+    
 }
 
 .options-title {
+    background: #FAFAFA;
     font-family: Work Sans, sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -47,4 +54,212 @@
     /* height: 15px; */
     border-bottom: 1px solid #EE3D48;
     color: #EE3D48;
+}
+
+.options-wrapper {
+    height: 152px;
+    overflow: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.options-wrapper-2 {
+    position: relative;
+    width: 100%;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    height: 50%;
+    border-bottom: 1px solid #EBEBEB;
+    background: #FAFAFA;
+}
+
+.option .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.option .name{ 
+    font-family: Work Sans,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #131313;
+    width: 100%;
+    text-overflow: clip;
+}
+
+.option .cost { 
+    font-family: Roboto Slab,sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: #EE3D48;
+    padding-bottom: 6px;
+}
+
+
+.option-picture {
+    padding-right: 8px;
+}
+
+
+.option-picture img {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.options-wrapper::-webkit-scrollbar {
+    width: 3px; /* ширина для вертикального скролла */
+    background-color: rgba(#fff, 0);
+    cursor: pointer;
+}
+
+
+.options-wrapper::-webkit-scrollbar-thumb {
+    background: #EE3D48;
+    border-radius: 2px;
+}
+
+.scroll-track {
+    position: absolute;
+    z-index: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #EBEBEB;
+    left: calc(100% - 2px);
+}
+
+
+.options-wrapper::-moz-scrollbar {
+    width: 3px; /* ширина для вертикального скролла */
+    background-color: rgba(#fff, 0);
+    cursor: pointer;
+}
+
+.options-wrapper::-moz-scrollbar-thumb {
+    background: #EE3D48;
+    border-radius: 2px;
+}
+
+
+.radio-btn {
+    cursor: pointer;
+    position: relative;
+    background: #FFFFFF;
+    border: 1px solid #EE3D48;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+}
+
+.radio-btn-active {
+    background: #EE3D48;
+    overflow: visible;
+}
+
+
+.rent-blocks-wrapper {
+    display:flex;
+    flex-direction: column;
+    border-bottom: 1px solid #FAFAFA;
+    padding-bottom: 2px;
+}
+
+.time-blocks-row {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.time-block {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 12px;
+    background: #F1F2F2;
+    border-radius: 6px;
+    font-family: Work Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 8px;
+}
+
+.time-block-active {
+    color: #fff;
+    background: #EE3D48;
+}
+
+.rent-title {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 10px 0 8px 0;
+
+    color: #939598;
+}
+
+.total {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+}
+
+.total-price {
+    font-family: Roboto Slab, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+
+    /* Text / Primary */
+
+    color: #131313;
+}
+
+.total .request-btn {
+    background: #EE3D48;
+    border-radius: 6px;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    width: 167px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+
+    color: #FFFFFF;
+}
+
+
+
+@media only screen and (max-width: 331px) {
+    .card {
+        padding-right: 16px;
+    }
+    
+}
+
+@media only screen and (max-width: 340px) {
+    .total-price {
+        font-size: 24px!important;
+    }
 }

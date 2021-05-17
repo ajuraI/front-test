@@ -11,7 +11,9 @@ class Slider extends React.Component {
     this.slide1 = React.createRef();
     this.slide2 = React.createRef();
     this.slide3 = React.createRef();
+    this.activeLine = React.createRef();
     this.animation = false;
+    this.number = 0;
   }
 
   getSlides = () => {
@@ -60,6 +62,9 @@ class Slider extends React.Component {
           return {slides: newSlides};
         })
       }, 500);
+      if (this.number+1 < this.props.children.length) this.number++;
+      else this.number = 0;
+      this.activeLine.current.style.left = this.number*8 + 'px';
       this.nextAnimation();
     }
     
@@ -80,6 +85,9 @@ class Slider extends React.Component {
           return {slides: newSlides};
         })
       }, 500);
+      if (this.number-1 >= 0) this.number--;
+      else this.number = this.props.children.length-1;
+      this.activeLine.current.style.left = this.number*8 + 'px';
       this.prevAnimation();
     }
   }
@@ -106,14 +114,12 @@ class Slider extends React.Component {
     if (this.props.children.length > 1) backLineWidth = {width: 16 + (this.props.children.length-1)*8 + 'px'};
     if (this.props.width) style.width = this.props.width + 'px';
     if (this.props.height) style.height = this.props.height + 'px';
-    let num = 0;
     return (
       <div className="slider-wrapper">
         <div className="slider" style={style}>
             {this.state.slides.map((id, index)=> {
             let style = {left: 0};
             if (this.state.slides.length === 1) {
-              num = 0;
               return (<div key={index} className="banner-slide" style={style} ref={this.slide1}>
                 {this.props.children}
               </div>)
@@ -137,7 +143,6 @@ class Slider extends React.Component {
               </div>)
             }
             else {
-              num = id;
               return (<div key={index} className="banner-slide" style={style} ref={this.slide1}>
                 {this.props.children[id]}
               </div>)
@@ -149,15 +154,16 @@ class Slider extends React.Component {
           <div className="button-next" onClick={()=> this.btnNextOnClick()}>
             <img src={btnNext}></img>
           </div>
+          <div className="active-field">
+            <div className="dot"></div>
+            <div className="longdot" style={backLineWidth}>
+              <div className="activeLine" ref={this.activeLine}></div>
+            </div>
+            <div className="dot"></div>
+        </div>
         </div>
         {/* <div>{num+1}/{this.state.slides.length}</div> */}
-        <div className="active-field">
-          <div className="dot"></div>
-          <div className="longdot" style={backLineWidth}>
-            <div className="activeLine" style={{left: num*8}}></div>
-          </div>
-          <div className="dot"></div>
-        </div>
+        
       </div>
     );
   }
