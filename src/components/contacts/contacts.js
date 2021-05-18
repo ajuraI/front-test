@@ -1,55 +1,50 @@
-import './news.css';
-import image from '../../img/news-img.png';
-import { useState } from 'react';
-import NewsCard from '../../components/news-card';
+import './contacts.css';
+import phone from '../../img/phone.svg';
+import { Map, Marker } from 'yandex-map-react';
 
-const newsCards = [
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'}, 
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'},
-  {img: image, type: 'Услуги', title: 'Фотобудки, GIF стойка', text: 'У нас есть широчайший ассортимент фотобудок на все случаи жизни', date: '20 Марта 2021'}]
 
-function News() {
 
-  const [visibleCount, setVisibleCount] = useState(3);
+function Contacts() {
 
-  const cardsList = () => {
-    let arr = [];
-    for (let i = 0; i < visibleCount; i++) {
-      arr.push(<li><NewsCard object={newsCards[i]}/></li>);
-    }
-    return arr;
-  }
-
-  const showMore = () => {
-    if (visibleCount + 3 > newsCards.length) setVisibleCount(newsCards.length);
-    else setVisibleCount(prev=>prev+3);
-  }
+  // const [visibleCount, setVisibleCount] = useState(3);
 
   return (
-    <section className="news">
-      <div className="overTitle">Почему выбирают нас?</div>
-      <div className="title">Новости</div>
-      {<ul>{cardsList()}</ul>}
-      <button class="showMore-btn" style={{display: visibleCount === newsCards.length ? 'none' : 'flex'}} onClick={() => showMore()}>Показать ещё</button>
-    </section>
+    <>
+      <section className="contacts">
+        <div className="overTitle">Мы всегда доступны для вас</div>
+        <div className="title">Контакты</div>
+        <div className="contacts-block">
+          <div className="contact-wrap">
+            <div className="contact-icon"><img src={phone} alt="" /></div>
+            <div className="contact-field">
+              <div className="contact-title">Телефон</div>
+              <div className="contact-text">+7 495 123 45 67</div>
+            </div>
+          </div>
+          <div className="contact-wrap">
+          <div className="contact-icon"><img src={phone} alt="" /></div>
+            <div className="contact-field">
+              <div className="contact-title">Адрес</div>
+              <div className="contact-text">109382, Москва, пр. Егорьевский, д.2а, стр.10 въезд на машине только с улицы Люблинская</div>
+            </div>
+          </div>
+          <div className="contact-wrap">
+          <div className="contact-icon contact-icon-empty"></div>
+            <div className="contact-field">
+              <div className="contact-title">Почта</div>
+              <div className="contact-text underline">Info@test.ru</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="map-wrapper">
+        <Map center={[55.751574, 37.573856]} zoom={12}>
+            <Marker lat={55.751574} lon={37.573856} />
+        </Map>
+      </div>
+    </>
   );
 }
-export default News;
+export default Contacts;
 
 

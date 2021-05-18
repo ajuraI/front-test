@@ -1,2 +1,2 @@
-import News from './news'
-export default News;
+import Contacts from './contacts'
+export default Contacts;

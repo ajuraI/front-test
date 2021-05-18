@@ -7,15 +7,30 @@
 
 @font-face {
   font-family: "Roboto Slab";
-  font-weight: normal;
+  font-weight: 500;
   font-display: swap;
   src: url(./fonts/roboto-slab/RobotoSlab-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-weight: 400;
+  font-display: swap;
+  src: url(./fonts/roboto-slab/RobotoSlab-Regular.ttf);
 }
 
 
 @font-face {
   font-family: "Work Sans";
-  font-weight: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(./fonts/work-sans/WorkSans-Regular.ttf);
+}
+
+
+@font-face {
+  font-family: "Work Sans";
+  font-weight: 500;
   font-display: swap;
   src: url(./fonts/work-sans/WorkSans-Medium.ttf);
 }

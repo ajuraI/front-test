@@ -11,7 +11,8 @@
     "react-dom": "^17.0.2",
     "react-input-mask": "^2.0.4",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.1.2"
+    "web-vitals": "^1.1.2",
+    "yandex-map-react": "^1.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
