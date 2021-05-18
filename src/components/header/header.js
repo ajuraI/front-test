@@ -32,7 +32,7 @@ function Header() {
         </div>
         <ModalWindow state={modal} close={()=> setModalState(false)} type={1}>
           <div className="ytVideo">
-            <iframe title="video" id="video" width="100%" height="100%" src="https://www.youtube.com/embed/KrGRF3TQBiw" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowFullScreen></iframe>
+            <iframe title="video" id="video" width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;picture-in-picture" allowFullScreen></iframe>
           </div>
         </ModalWindow>
     </header>
