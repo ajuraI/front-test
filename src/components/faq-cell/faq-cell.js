@@ -12,7 +12,7 @@ function FaqCell(props) {
       <div className={state ? "faq-question-wrapper faq-question-wrapper-active" : "faq-question-wrapper"}>
         <div className={state ? "faq-question faq-question-active" : "faq-question"} onClick={()=> setState()}>
           <div className="question-title">{title}</div>
-          <div className="downArrow-wrapper"><img src={state ? downArrowWhite: downArrowRed} alt=""></img></div>
+          <div className="downArrow-wrapper"><img src={state ? downArrowWhite : downArrowRed} alt=""></img></div>
         </div>
         <div className={state ? "faq-slide": "faq-slide faq-slide-hidden"}>{children}</div>
       </div>

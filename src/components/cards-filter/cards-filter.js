@@ -3,7 +3,7 @@ import { useState } from 'react';
 import downArrow from '../../img/downArrow.svg';
 import Card from '../../components/card';
 
-const options = [{name: 'Разработка макета рамки #1', price: 500}]
+const options = [{name: 'Разработка макета рамки #1', price: 500}, {name: 'Разработка макета рамки #1', price: 500}]
 const Cards = [{name: 'Фотобудка с ширмой #1', price: 17000, size: '2м x 1.5м x 2 м', options: options},{name: 'Фотобудка с ширмой #1', price: 17000, size: '2м x 1.5м x 2 м', options: options}];
 
 // const options = [{name: 'Разработка макета рамки #1', price: 500},

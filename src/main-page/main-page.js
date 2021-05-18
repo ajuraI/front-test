@@ -4,6 +4,7 @@ import Info from '../components/info';
 import CardsFilter from '../components/cards-filter';
 import FAQ from '../components/faq';
 import News from '../components/news';
+import Contacts from '../components/contacts';
 
 function MainPage() {
   return (
@@ -13,6 +14,7 @@ function MainPage() {
       <CardsFilter />
       <FAQ />
       <News />
+      <Contacts />
     </div>
     
   );

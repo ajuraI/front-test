@@ -1,0 +1,16 @@
+.news .title {
+    font-size: 32px;
+}
+
+.news {
+    padding: 0 16px;
+    margin-top: 60px;
+}
+
+.news li {
+    list-style-type: none;
+}
+
+.news ul {
+    padding: 0;
+}
