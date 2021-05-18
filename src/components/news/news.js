@@ -1,5 +1,5 @@
 import './news.css';
-import image from '../../img/news-img.png';
+import image from '../../img/news-img.webp';
 import { useState } from 'react';
 import NewsCard from '../../components/news-card';
 

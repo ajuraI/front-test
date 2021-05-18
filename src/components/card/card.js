@@ -1,12 +1,13 @@
 import './card.css';
 import Slider from '../slider';
-import image from '../../img/photo.png';
+import image from '../../img/photo.webp';
 import mark from '../../img/check-mark.svg';
 import { useState } from 'react';
 import ModalWindow from '../modal-window'
 import DropDown from '../drop-down'
 import InputMask from 'react-input-mask';
 import downArrow from '../../img/downArrow.svg';
+import ImgWebp from '../img-webp'
 
 
 
@@ -40,7 +41,8 @@ function Card({cardProp}) {
     cardProp.options.map((opt, idx)=> {
       return <div key={idx} className="option">
        <div className="option-picture">
-         <img src={image} alt="" width="60px" height="60px"/>
+         {/* <img src={image} alt="" width="60px" height="60px"/> */}
+         <ImgWebp srcWebp={image} alt=""/>
        </div>
        <div className="description">
          <div className="name">{opt.name}</div>

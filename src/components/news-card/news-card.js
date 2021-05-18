@@ -1,4 +1,5 @@
 import './news-card.css';
+import ImgWebp from '../img-webp'
 
 
 
@@ -10,7 +11,7 @@ function NewsCard({object}) {
   return (
     <div className="news-card">
       <div className="img">
-        <img src={img} alt=""/>
+        <ImgWebp srcWebp={img} alt=""/>
       </div>
       <div className="card-description">
         <div className="overTitle">{type}</div>

@@ -1,8 +1,8 @@
 import './contacts.css';
 import phone from '../../img/phone.svg';
 //import { Map, Marker } from 'yandex-map-react';
-import map from '../../img/map.png'
-
+import map from '../../img/map.webp'
+import ImgWebp from '../img-webp'
 
 
 function Contacts() {
@@ -39,7 +39,8 @@ function Contacts() {
         </div>
       </section>
       <div className="map-wrapper">
-        <img src={map} alt="" />
+        {/* <img src={map} alt="" /> */}
+        <ImgWebp srcWebp={map} alt=""/>
         {/* <Map center={[55.751574, 37.573856]} zoom={12}>
             <Marker lat={55.751574} lon={37.573856} />
         </Map> */}
